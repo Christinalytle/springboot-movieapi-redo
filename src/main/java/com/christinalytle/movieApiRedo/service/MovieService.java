@@ -45,6 +45,7 @@ public class MovieService {
 		try {
 			Movie oldMovie = repo.findById(id).orElseThrow(); 
 			oldMovie.setTitle(movie.getTitle());
+			oldMovie.setSynopsis(movie.getSynopsis());
 			oldMovie.setPosterUrl(movie.getPosterUrl());
 			return repo.save(oldMovie); 
 		} catch (Exception e) {

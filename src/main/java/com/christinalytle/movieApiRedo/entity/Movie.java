@@ -9,17 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 public class Movie {
 	
 	private Long movieId; 
 	private String title;
+	private String synopsis; 
 	private String posterUrl; 
 	private Set<Review> reviews; 
-	
-	@JsonIgnore
 	private Set<Screening> screenings; 
 	
 	
@@ -62,6 +59,12 @@ public class Movie {
 	
 	public void setPosterUrl(String posterUrl) {
 		this.posterUrl = posterUrl;
+	}
+	public String getSynopsis() {
+		return synopsis;
+	}
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
 	}
 	
 	

@@ -5,10 +5,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.christinalytle.movieApiRedo.entity.Auditorium;
 import com.christinalytle.movieApiRedo.entity.Movie;
 import com.christinalytle.movieApiRedo.entity.Screening;
-import com.christinalytle.movieApiRedo.repository.AuditoriumRepo;
 import com.christinalytle.movieApiRedo.repository.MovieRepo;
 import com.christinalytle.movieApiRedo.repository.ScreeningRepo;
 
@@ -21,9 +19,7 @@ public class ScreeningService {
 	
 	@Autowired
 	private ScreeningRepo repo; 
-	
-	@Autowired
-	private AuditoriumRepo audRepo; 
+
 	
 	@Autowired
 	private MovieRepo movieRepo; 
@@ -45,23 +41,18 @@ public class ScreeningService {
 	}
 	
 	//POST
-	public Screening createScreening (Long auditoriumId, Long movieId, String time) {
-		Screening screening = new Screening(); 
-		Auditorium aud = audRepo.findById(auditoriumId).orElseThrow(); 
+	public Screening createScreening (Screening screening, Long movieId) { 
 		Movie mov = movieRepo.findById(movieId).orElseThrow(); 
-		screening.setAuditorium(aud);
 		screening.setMovies(mov);
-		screening.setTime(time);
 		return repo.save(screening); 
 	}
 	
 	//Update
-	public Screening updateScreening(Long screeningId, Long auditoriumId, Long movieId, String time ) throws Exception {
+	public Screening updateScreening(Long screeningId, Long movieId, Long auditorium, String time ) throws Exception {
 		try {
 			Screening oldScreening = repo.findById(screeningId).orElseThrow(); 
-			Auditorium aud = audRepo.findById(auditoriumId).orElseThrow(); 
 			Movie mov = movieRepo.findById(movieId).orElseThrow(); 
-			oldScreening.setAuditorium(aud);
+			oldScreening.setAuditorium(auditorium);
 			oldScreening.setMovies(mov);
 			oldScreening.setTime(time);
 			return repo.save(oldScreening);

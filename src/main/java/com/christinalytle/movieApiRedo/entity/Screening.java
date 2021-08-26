@@ -7,14 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
 public class Screening {
 	private Long screeningId;
-	private Movie movies; 
-	private Auditorium auditoriums; 
+	private Long auditorium; 
 	private String time;
+	
+	@JsonIgnore
+	private Movie movies; 
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,14 +41,12 @@ public class Screening {
 		this.movies = movies;
 	}
 	
-	@ManyToOne
-	@JoinColumn(name = "auditoriumId")
-	public Auditorium getAuditorium() {
-		return auditoriums;
+	public Long getAuditorium() {
+		return auditorium;
 	}
 	
-	public void setAuditorium(Auditorium auditoriums) {
-		this.auditoriums = auditoriums;
+	public void setAuditorium(Long auditorium) {
+		this.auditorium = auditorium;
 	}
 	
 	public String getTime() {

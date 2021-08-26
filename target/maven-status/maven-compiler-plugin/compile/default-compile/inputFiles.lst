@@ -1,0 +1,15 @@
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/entity/Screening.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/controller/MovieController.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/controller/ScreeningController.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/repository/ScreeningRepo.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/service/ScreeningService.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/controller/ReviewController.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/App.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/entity/ScreeningDto.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/entity/ReviewDto.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/repository/MovieRepo.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/service/MovieService.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/repository/ReviewRepo.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/service/ReviewService.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/entity/Movie.java
+/Users/apple/eclipse-workspace/movieApiRedo/src/main/java/com/christinalytle/movieApiRedo/entity/Review.java

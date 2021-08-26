@@ -3,17 +3,17 @@ package com.christinalytle.movieApiRedo.entity;
 public class ScreeningDto {
 	
 	private Long movieId; 
-	private Long auditoriumId;
+	private Long auditorium;
 	private String time;
 	  
 	
 	//The DTO is used to input variables in PostMan so they can connect to the right object 
 	
-	public Long getAuditoriumId() {
-		return auditoriumId;
+	public Long getAuditorium() {
+		return auditorium;
 	}
-	public void setAuditoriumId(Long auditoriumId) {
-		this.auditoriumId = auditoriumId;
+	public void setAuditorium(Long auditorium) {
+		this.auditorium = auditorium;
 	}
 	
 	
